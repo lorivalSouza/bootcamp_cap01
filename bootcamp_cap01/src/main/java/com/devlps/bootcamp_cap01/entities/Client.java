@@ -24,7 +24,7 @@ public class Client implements Serializable{
 	private Double income;
 	
 	@Column(name = "BIRTH_DATE", columnDefinition = "TIMESTAMP WITHOUT TIME ZONE")
-	private Instant bithDate;
+	private Instant birthDate;
 	private Integer children;
 	
 	public Client() {
@@ -35,7 +35,7 @@ public class Client implements Serializable{
 		this.name = name;
 		this.cpf = cpf;
 		this.income = income;
-		this.bithDate = bithDate;
+		this.birthDate = bithDate;
 		this.children = children;
 	}
 
@@ -71,12 +71,12 @@ public class Client implements Serializable{
 		this.income = income;
 	}
 
-	public Instant getBithDate() {
-		return bithDate;
+	public Instant getBirthDate() {
+		return birthDate;
 	}
 
-	public void setBithDate(Instant bithDate) {
-		this.bithDate = bithDate;
+	public void setBirthDate(Instant birthDate) {
+		this.birthDate = birthDate;
 	}
 
 	public Integer getChildren() {
