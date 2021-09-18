@@ -3,6 +3,8 @@ package com.devlps.bootcamp_cap01.dto;
 import java.time.Instant;
 import java.util.Objects;
 
+import com.devlps.bootcamp_cap01.entities.Client;
+
 public class ClientDTO {
 	
 	private Long id;
@@ -16,7 +18,6 @@ public class ClientDTO {
 	}
 
 	public ClientDTO(Long id, String name, String cpf, Double income, Instant bithDate, Integer children) {
-		super();
 		this.id = id;
 		this.name = name;
 		this.cpf = cpf;
@@ -24,6 +25,16 @@ public class ClientDTO {
 		this.bithDate = bithDate;
 		this.children = children;
 	}
+	
+	public ClientDTO(Client entity) {
+		id = entity.getId();
+		name = entity.getName();
+		cpf = entity.getCpf();
+		income = entity.getIncome();
+		bithDate = entity.getBithDate();
+		children = entity.getChildren();
+	}
+
 
 	public Long getId() {
 		return id;
